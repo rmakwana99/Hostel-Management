@@ -5,41 +5,59 @@
 	padding: 0px;
 }
 
+#title_rec {
+	position:fixed;
+	z-index: 100;
+	background-color: #0080c0;
+	opacity: 0.9.5;
+	height: 80px;
+	width: 100%;
+}
+
+
 #main_line {
 	font-family: fantasy;
-	color: #ff5959;
+	color: black;
 	font-size: 35px;
-	margin-left: 38%;
+	margin-left: 4%;
 	margin-top: -22px;
 	opacity: 1;
 }
 
 #logo_12{
-	width: 7em;
+	margin-left: 10px;
+	border-radius: 7px;
+	padding-left: 5px;
+	margin-top:8px;
+	width: 15em;
+	border:2px thin #0080c0;
+	background-color: #dadada;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0
+		rgba(0, 0, 0, 0.2);
 }
 
 #logo_1 {
+	
 	float: left;
 	text-align: left;
-	margin-left: 10px;
-	margin-top: 15px;
+	margin-left: 5px;
+	margin-top: 5px;
 	font-family: sans-serif;
 	font-size: 50px;
-	color: #00ae57;
-	font-size: 50px;
-	opacity: 1
+	color: #0d787d;
+	font-size: 45px;
 }
 
 #logo_2 {
-	width: 7em;;
+	padding-top:0.3em;
+	width: 6em;;
 	font-family: sans-serif;
 	font-size: 40px;
-	color: #0080c0;
-	opacity: 1
+	color: blue;
 }
 
 #title {
-	background-color: #232323;
+	background-color: black;
 	height: 100px;
 	wdth: 100%;
 	text-decoration: none;
@@ -59,11 +77,11 @@
 	font-family: sans-serif;
 	text-decoration: blink;
 	font-size: 18px;
-	color: #00dfdf;
+	color: #7777f9;
 }
 
 #line_down{
-	margin-top: 13px;
+	margin-top: 11px;
 }
 
 #link_fp {
@@ -73,7 +91,7 @@
 	font-family: sans-serif;
 	text-decoration: underline;
 	font-size: 14px;
-	color: #e6e600;
+	color: black;
 }
 
 #link_login {
@@ -83,21 +101,21 @@
 	height: 30px;
 	width: 200px;
 	text-align: center;
-	background-color: #414141;
+	background-color: #eeeeee;
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 20px;
-	color: #ff5959;
+	color: #10949a;
 }
 
 /*-----------Rector Division------------*/
 #rector {
-	margin-top: 80px;
+	padding-top: 5em;
 	position:relative;
 	text-align: center;
 	height:19em;
 	width: 50%;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #dadada;
 	float: left;
 }
 
@@ -119,13 +137,13 @@
 	margin-bottom: 10px;
 	border-radius: 5px;
 	padding-top: 5px;
-	margin-left: 28%;
+		margin-left: 15em;
 	height: 17em;
 	width: 19em;
-	background-color: #414141;
+	background-color: #eeeeee;
 	margin-top: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+		rgba(0, 0, 0, 0.10);
 }
 
 #form_rec input {
@@ -149,8 +167,8 @@
 	color: white;
 	background-color: #0080c0;
 	margin-left: 45px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0
+		rgba(0, 0, 0, 0.10);
 }
 
 #login_rec input {
@@ -163,11 +181,12 @@
 
 /*-----------Student Division------------*/
 #student {
-	margin-top: 5em;
+	padding-top: 5em;
+	position:relative;
 	text-align: center;
 	height:19em;
 	width: 50%;
-	background-image: linear-gradient(to left, #008c46,#0080c0);
+	background-color: #dadada;
 	float: left;
 }
 
@@ -178,10 +197,10 @@
 	margin-left: 28%;
 	height: 17em;
 	width: 19em;
-	background-color: #414141;
+	background-color: #eeeeee;
 	margin-top: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+		rgba(0, 0, 0, 0.10);
 }
 #login_stu {
 	font-family: sans-serif;
@@ -229,7 +248,7 @@
 	padding-top: 10px;
 	padding-bottom : 15px;
 	width: 100%;
-	background-image: linear-gradient(to left, #008c46, #0080c0);
+	background-color: #dadada;
 }
 
 #hostel_image p {
@@ -237,7 +256,7 @@
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
-	color: white;
+	color: #10949a;
 	text-align: center;
 }
 
@@ -263,10 +282,10 @@
 
 /*---------- Rules And Regulation -----------*/
 #rr_link_login {
-	margin-top: 10px;
+	margin-top: 7px;
 	text-decoration: none;
 	font-size: 25px;
-	color: white;
+	color:#10949a ;
 }
 
 #rr_details {
@@ -274,14 +293,13 @@
 	position: relative;
 	float: left;
 	width: 100%;
-	opacity: 0.9;
 	text-align: center;
-	background-image: linear-gradient(to left, #008c46, #0080c0);
+	background-color: #dadada;
 }
 
 #rr_rules {
 	font-family: sans-serif;
-	color: #f0f0f0;
+	color: #400040;
 	margin-left: 2em;;
 	margin-top: 2em;
 	text-align: left;
@@ -295,8 +313,7 @@
 /*-----------Rector Registration-----------*/
 #rec_title_regi {
 	font-family: sans-serif;
-	font-size: 30px;
-	color: white;
+	font-size: 25px;
 }
 
 #rec_icon {
@@ -305,17 +322,8 @@
 	margin-right: 10px;
 }
 
-#title_rec {
-	position:fixed;
-	z-index: 100;
-	background-color: black;
-	opacity: 0.9;
-	height: 80px;
-	width: 100%;
-}
-
 #register_rec {
-	height: 30em;
+	height: 28em;
 	width: 100px;
 	border: 1px solid white;
 	border-radius: 5px;
@@ -323,19 +331,17 @@
 	background-color: #008c46;
 	margin-left: 55px;
 	margin-right: 18px;
-	margin-top: 5em;
 }
 
 #form_rec_registration {
 	text-align: center;
-	height: 32em;
+	height: 28em;
 	width: 100%;
 	padding-top: 7em;
 	padding-bottom: 10px;
-	background-color: #0078b3;
+	background-color:  #dadada;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
 		rgba(0, 0, 0, 0.30);
-	background-color: #0078b3;
 }
 
 #form_rec_registration input {
@@ -347,8 +353,6 @@
 
 #form_rec_registration table {
 	margin-top: 15px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
 	border-radius: 5px;
 	margin-left: 38%;
 	padding-bottom: 10px;
@@ -361,10 +365,12 @@
 
 /*-----------Student Registration-----------*/
 #stu_title_regi {
-	padding-top:5px;
+	padding-left: 15px;
+	text-align:center;
 	font-family: sans-serif;
-	font-size: 30px;
-	color: white;
+	font-size: 20px;
+	color: #10949a;
+	padding-bottom: 5px;
 }
 
 #stu_icon {
@@ -387,35 +393,33 @@
 	height: 550px;
 	padding-top: 80px;
 	padding-left: 20px;
-	/*background-color: #008c46;*/
-	background-image: linear-gradient(to left, #008c46, #0080c0);
+	background-color: #dadada;
 }
 
 #form_stu_registration table {
-	margin-top: 15px;
-	
+	margin-top: 5px;
 	padding-left: -10px;
 	padding-right: 30px;
-	height: 480px;
+	height: 50px;
+	width: 250px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-left: 37%;
 	border-radius: 5px;
-	background-color: #008c46;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+	background-color: #eeeeee;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0
+		rgba(0, 0, 0, 0.10);
 }
 
 #form_stu_registration input {
-	margin-top: 2px;
+	margin-top: 5px;
 	width: 250px;
-	height: 28px;
+	height: 26px;
 	border-radius: 5px;
-	box-shadow: 2px 2px 2px black;
 }
 
 #title_stu {
-	position:fixed;
+	
 	width:100%;
 	background-color: #232323;
 	height: 80px;
@@ -425,9 +429,9 @@
 #reset_pw {
 	margin-top: 80px;
 	text-align: center;
-	height: 25em;
+	height: 29.9em;
 	width: 100%;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #dadada;
 	float: left;
 }
 
@@ -436,11 +440,11 @@
 	height: 20px;
 	width: 200px;
 	text-align: center;
-	background-color: #414141;
+	background-color: #eeeeee;
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 20px;
-	color: #ff5959;
+	color: #10949a;
 }
 
 #form_rp {
@@ -448,12 +452,12 @@
 	height: 16em;
 	width: 40%;
 	margin-left: 30%;
-	background-color: #414141;
+	background-color: #eeeeee;
 	border-radius: 5px;
 	opacity: 80;
-	margin-top: 30px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+	margin-top: 80px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 4px 18px 0
+		rgba(0, 0, 0, 0.10);
 }
 
 #form_rp table {
@@ -477,48 +481,45 @@
 	padding-top: 5px;
 }
 
-#login_rec_cus {
+#login_rp_cus {
 	height: 30px;
 	width: 200px;
 	margin-left: 30%;
-	margin-top: 20px;
+	margin-top: 15px;
 	border: 1px ridge white;
 	border-radius: 5px;
 	color: white;
 	background-color: #0080c0;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+		rgba(0, 0, 0, 0.10);
 }
-
-/*-------------- About us ----------------*/
+/*------------- About Us ---------------*/
 #about_us {
-	padding-top:5em;
+	padding-top:7em;
 	height: 30em;
 	width: 100%;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #dadada;
 }
 
 #about_us_data {
-	opacity: 60;
 	border-radius: 5px;
 	margin-top: -430px;
 	height: 400px;
 	width: 700px;
 	margin-left: 400px;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #eeeeee;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
-	z-index: 1;
+		rgba(0, 0, 0, 0.20);
 }
 
 #about_us img {
 	margin-left: 30px;
 	height: 200px;
-	width: 300px;
-	border-radius: 80px;
-	border: 2px ridge white;
+	width: 200px;
+	border-radius: 8px;
+	border: 1px thin white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+		rgba(0, 0, 0, 0.10);
 }
 
 #about_us p {
@@ -528,9 +529,9 @@
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
-	color: white;
+	color: #10949a;
 	text-align: center;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #eeeeee;
 }
 
 /*-------------- Contact us ----------------*/
@@ -539,7 +540,7 @@
 	text-align: center;
 	height: 30em;
 	width: 100%;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #eeeeee;
 	float: left;
 }
 
@@ -549,11 +550,11 @@
 	width: 10em;
 	margin-top: -5px;
 	text-align: center;
-	background-color: #414141;
+	background-color: #dadada;
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 20px;
-	color: #ff5959;
+	color: #10949a;
 	z-index: 100;
 }
 
@@ -562,7 +563,7 @@
 	height: 14em;
 	width: 40%;
 	margin-left: 25em;
-	background-color: #414141;
+	background-color: #dadada;
 	border-radius: 5px;
 	opacity: 80;
 	margin-top: 4em;
@@ -614,13 +615,13 @@
 	height: 30px;
 	width: 200px;
 	margin-left: 30%;
-	margin-top: 20px;
+	margin-top: 0px;
 	border: 1px ridge white;
 	border-radius: 5px;
 	color: white;
 	background-color: #0080c0;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0
-		rgba(0, 0, 0, 0.30);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0
+		rgba(0, 0, 0, 0.10);
 }
 
 #footer_cu {
@@ -732,7 +733,7 @@
 	padding-top:5em;
 	height: 30em;;
 	width: :100%;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #dadada;
 }
 
 #copyright_content p {
@@ -740,7 +741,7 @@
 	font-size: 17px;
 	text-decoration: none;
 	font-family: sans-serif;
-	color: white;
+	color: black;
 }
 
 /*-------------- Footer Part index ------------*/
@@ -749,7 +750,7 @@
 	float: left;
 	height: 4em;
 	width: 100%;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #0098e1;
 }
 
 #footer a {

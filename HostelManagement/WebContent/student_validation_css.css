@@ -1,24 +1,21 @@
 @CHARSET "ISO-8859-1";
 /*------------------ Student Registration validation ---------------------*/
-
 #msg {
-  display: none;
-  position: absolute;
-  z-index: 200;
- /* background: url(msg_arrow.gif) left center no-repeat; */
- 	background-color: #008c46;
- color:white;
-  padding-left: 7px;
-  	
+	display: none;
+	position: absolute;
+	z-index: 200;
+	background-color: #0080c0;
+	color: white;
+	padding-left: 7px;
 }
 
 #msgcontent {
-	font-family : sans-serif;
-  display: block;
-  background: ;
-  border: 1px solid white;
-  border-left: none;
-  padding: 5px;
-  min-width: 150px;
-  max-width: 250px;
+	font-family: sans-serif;
+	display: block;
+	background:;
+	border: 1px solid white;
+	border-left: none;
+	padding: 5px;
+	min-width: 150px;
+	max-width: 250px;
 }

@@ -8,13 +8,19 @@
 <script type="text/javascript" src="validation.js"></script>
 <meta charset="ISO-8859-1">
 <body>
+<!-- Header Logo  -->
+
 	<div id="title_rec">
-		<a style="text-decoration: none" href="index.html"><p id="logo_1">hostel</p><p id="logo_2">.com</p></a><p id="main_line">Welcome to Hoste!</p>
+		<div id="logo_12">
+			<a style="text-decoration: none" href="index.html"><p id="logo_1">Hoste!</p>
+				<p id="logo_2">.com</p></a>
+			</div>
 	</div>
+	
 	<form id="form_rec_registration" action="add_rector" method="get" onsubmit="return rectorRegistration(this)">
-		<p id="rec_title_regi">Rector Registration Form</p>
 		<table>
-			<tr>
+		<tr><td><p id="stu_title_regi">Rector Registration Form</p>
+		<hr id="link_1"></hr><br/></td></tr>
 			<tr>
 				<td><img src="icons/icons/student_name.png" id="rec_icon" /><input id="rec_name"
 					type="text" name="rector_name" placeholder="Name" /></td>
@@ -61,11 +67,12 @@
 		</table>
 	</form>
 	
-	<div id="footer_rector">
-	<hr id="line_f"></hr><br/>
-			<a id="footer_r1" href="aboutus.html">About Us.</a>
-			<a id="footer_r2" href="contactus.html">Contact Us</a>
-			<a id="footer_r3" href="copyright.html">@copyright</a>
-		</div>
+	<!--  footer here -->
+
+	<div id="footer">
+		<a id="footer_1" href="aboutus.html">About Us.</a> <a id="footer_2"
+			href="contactus.html">Contact Us</a> <a id="footer_3"
+			href="copyright.html">@copyright</a>
+	</div>
 </body>
 </html>
