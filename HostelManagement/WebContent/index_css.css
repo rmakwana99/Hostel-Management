@@ -29,7 +29,7 @@
 	border-radius: 7px;
 	padding-left: 5px;
 	margin-top:8px;
-	width: 15em;
+	width: 4.5em;
 	border:2px thin #0080c0;
 	background-color: #dadada;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0
@@ -37,23 +37,20 @@
 }
 
 #logo_1 {
-	
+	height: 58.5px;
+	width: 58.5px;
 	float: left;
-	text-align: left;
 	margin-left: 5px;
 	margin-top: 5px;
-	font-family: sans-serif;
-	font-size: 50px;
-	color: #d05706;
-	font-size: 45px;
 }
 
 #logo_2 {
+	margin-left: 600px;
 	padding-top:0.3em;
-	width: 6em;;
+	width: 5em;;
 	font-family: sans-serif;
 	font-size: 40px;
-	color: blue;
+	color: #eeeeee;
 }
 
 #title {
