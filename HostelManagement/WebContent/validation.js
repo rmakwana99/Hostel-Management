@@ -89,6 +89,7 @@ function rectorRegistration(form_rec_registration) {
 
 	var nameRegex = /^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$/;
 	var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	var addressRegx = /^[0-9a-zA-Z@#$&/,()-]+$/;
 	var messageRegex = new RegExp(
 			/<\/?\w+((\s+\w+(\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>/gim);
 	var phoneRegex = /^[0-9]+$/;
@@ -119,8 +120,8 @@ function rectorRegistration(form_rec_registration) {
 		inlineMsg('rec_add', 'You must enter Address.', 4);
 		return false;
 	}
-	if (!address.match(messageRegex)) {
-		inlineMsg('rec_add', 'You have entered an invalid message.', 4);
+	if (!address.match(addressRegx)) {
+		inlineMsg('rec_add', 'You have entered an invalid Address.', 4);
 		return false;
 	}
 

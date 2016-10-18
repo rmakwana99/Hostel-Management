@@ -1,6 +1,7 @@
 package com.rahulvivek.hostel.db;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Blob;
@@ -70,9 +71,12 @@ public class RectorData {
 			ps.setString(8, password);
 			ps.setString(9, dateOfJoin);
 			ps.setString(10, "");
+			if(photo != "") {
 			FileInputStream fin=new FileInputStream(photo);  
 			ps.setBinaryStream(11,fin,fin.available());  
-			
+			}
+			else
+				ps.setString(11, "");
 
 			status = ps.executeUpdate();
 		} catch (ClassNotFoundException | IOException | SQLException e) {
@@ -92,16 +96,20 @@ public class RectorData {
 			Statement smt = con.createStatement();
 			ResultSet rs = smt.executeQuery("select * from rector where rid="+rid);
 
+			String rphoto;
 			while (rs.next()) {	
-				
+				if(rs.getBlob("photo")!=null) {
 				Blob b=rs.getBlob("photo"); 
 				byte barr[]=b.getBytes(1,(int)b.length()); 
 				              
 				FileOutputStream fout=new FileOutputStream("WebContent\\image\\rector_photo\\r"+rid+".jpg");  
 				fout.write(barr);  
-				String rphoto= "WebContent\\image\\rector_photo\\r"+rid+".jpg";         
-				
+				rphoto= "WebContent\\image\\rector_photo\\r"+rid+".jpg";  
 				fout.close();  
+				}
+				else
+					rphoto="WebContent\\image\\rector_photo\\user_image.png";
+				
 				rector = new Rector(rs.getInt("rid"), rs.getString("name"), rs.getString("dob"), rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"), rs.getString("email"),
 						rs.getString("password"), rs.getString("doj"), rs.getString("dol"), rphoto);
 
