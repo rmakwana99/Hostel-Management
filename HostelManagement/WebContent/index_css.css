@@ -650,7 +650,7 @@
 	
 	height: 250px;
 	width: 100%;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #dadada;
 }
 
 #hostel_view p {
@@ -660,15 +660,15 @@
 	float:left;
 	padding-top: 10px;
 	margin-top: 10px;
-	color: white;
+	color: #d05706;
 	font-size: 15px;
 	font-weight:bold;
 	text-align: center;
 	border-radius: 10px;
 	margin-left: 15px;
-	background-color: #3b3b3b;
-	box-shadow: 2px 6px 6px 2px white, 0 6px 20px 0
-		rgba(0, 0, 0, 0.50);
+	background-color: #eeeeee;
+	box-shadow: 0px 4px 6px 0px black, 0 6px 10px 0
+		rgba(0, 0, 0, 0.10);
 }
 
 #hostel_view a {
@@ -677,12 +677,12 @@
 	float:left;
 	margin-left: 17px;
 	margin-top: 40px;
-	color: white;
+	color: #d05706;
 	font-size: 15px;
 	font-weight:bold;
 	text-align: center;
 	border-radius: 10px;
-	background-color: #3b3b3b;
+	background-color: #eeeeee;
 }
 
 #hostel_view_info {
@@ -695,21 +695,21 @@
 	font-size: 25px;
 	color: white;
 	text-align: center;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #eeeeee;
 }
 
 #hostel_view_floor_1 {
 	height: 30px;
 	width: 100%;
-	padding-top: 30px;
+	padding-top: 45px;
 	padding-bottom: 10px;
 	text-align: center;
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
-	color: white;
+	color: #10949a;
 	text-align: left;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #dadada;
 	padding-bottom: 10px;
 }
 
@@ -722,9 +722,9 @@
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 25px;
-	color: white;
+	color: #10949a;
 	text-align: left;
-	background-image: linear-gradient(to left, #0080c0, #008c46);
+	background-color: #dadada;
 }
 
 
