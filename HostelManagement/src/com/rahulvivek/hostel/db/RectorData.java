@@ -13,6 +13,8 @@ import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.servlet.http.Part;
+
 public class RectorData {
 
 	public static List<Rector> getAllRector() {
@@ -48,7 +50,7 @@ public class RectorData {
 	}
 
 	public static int saveRector(int rid, String name, String dob, String address, long phoneNo, String email,
-			String password, String dateOfJoin, String photo) {
+			String password, String dateOfJoin, Part photo) {
 		int status = 0;
 
 		String sqlqry = "insert into rector(rid,name,dob,collage,address,phoneno,email,password,dojoin,dol,photo) values(?,?,?,?,?,?,?,?,?,?,?)";
@@ -71,12 +73,10 @@ public class RectorData {
 			ps.setString(8, password);
 			ps.setString(9, dateOfJoin);
 			ps.setString(10, "");
-			if(photo != "") {
-			FileInputStream fin=new FileInputStream(photo);  
-			ps.setBinaryStream(11,fin,fin.available());  
-			}
-			else
-				ps.setString(11, "");
+
+			// FileInputStream fin=new FileInputStream(photo);
+			//ps.setBinaryStream(11, photo.getInputStream(), (int) photo.getSize());
+			// ps.setBinaryStream(11,fin,fin.available());
 
 			status = ps.executeUpdate();
 		} catch (ClassNotFoundException | IOException | SQLException e) {
@@ -85,7 +85,7 @@ public class RectorData {
 
 		return status;
 	}
-	
+
 	public static Rector getRector(int rid) {
 		Rector rector = new Rector();
 
@@ -94,24 +94,25 @@ public class RectorData {
 			con = Connector.getConnection();
 
 			Statement smt = con.createStatement();
-			ResultSet rs = smt.executeQuery("select * from rector where rid="+rid);
+			ResultSet rs = smt.executeQuery("select * from rector where rid=" + rid);
 
 			String rphoto;
-			while (rs.next()) {	
-				if(rs.getBlob("photo")!=null) {
-				Blob b=rs.getBlob("photo"); 
-				byte barr[]=b.getBytes(1,(int)b.length()); 
-				              
-				FileOutputStream fout=new FileOutputStream("WebContent\\image\\rector_photo\\r"+rid+".jpg");  
-				fout.write(barr);  
-				rphoto= "WebContent\\image\\rector_photo\\r"+rid+".jpg";  
-				fout.close();  
-				}
-				else
-					rphoto="WebContent\\image\\rector_photo\\user_image.png";
-				
-				rector = new Rector(rs.getInt("rid"), rs.getString("name"), rs.getString("dob"), rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"), rs.getString("email"),
-						rs.getString("password"), rs.getString("doj"), rs.getString("dol"), rphoto);
+			while (rs.next()) {
+				if (rs.getBlob("photo") != null) {
+					Blob b = rs.getBlob("photo");
+					byte barr[] = b.getBytes(1, (int) b.length());
+
+					FileOutputStream fout = new FileOutputStream("WebContent\\image\\rector_photo\\r" + rid + ".jpg");
+					fout.write(barr);
+					rphoto = "WebContent\\image\\rector_photo\\r" + rid + ".jpg";
+					fout.close();
+				} else
+					rphoto = "WebContent\\image\\rector_photo\\user_image.png";
+
+				rector = new Rector(rs.getInt("rid"), rs.getString("name"), rs.getString("dob"),
+						rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"),
+						rs.getString("email"), rs.getString("password"), rs.getString("doj"), rs.getString("dol"),
+						rphoto);
 
 			}
 			return rector;

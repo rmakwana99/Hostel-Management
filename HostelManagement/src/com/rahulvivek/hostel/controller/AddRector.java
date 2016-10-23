@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import javax.servlet.http.Part;
 import com.rahulvivek.hostel.db.RectorData;
 
 
@@ -24,12 +25,13 @@ public class AddRector extends HttpServlet {
 		long mobile=Long.parseLong(request.getParameter("rector_numb"));
 		String email=request.getParameter("rector_email");
 		String password=request.getParameter("rector_pass");
-		String photo=request.getParameter("rector_photo");
+		//String photo=request.getParameter("rector_photo");
+		Part rphoto =  request.getPart("rector_photo");
 		String dateOfJoin=request.getParameter("doj");
 		
-		System.out.println(name+" "+dob+" "+address+" "+mobile+" "+email+" "+password+" "+photo+" "+dateOfJoin);
+		System.out.println(name+" "+dob+" "+address+" "+mobile+" "+email+" "+password+" "+rphoto+" "+dateOfJoin);
 	
-		int i=RectorData.saveRector(rid, name, dob, address,  mobile, email, password, dateOfJoin, photo);
+		int i=RectorData.saveRector(rid, name, dob, address,  mobile, email, password, dateOfJoin, rphoto);
 	
 		if(i>0) {
 			response.sendRedirect("index.html");
