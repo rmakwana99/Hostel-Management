@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,9 +29,12 @@ public class RectorData {
 			ResultSet rs = smt.executeQuery("select * from rector");
 
 			while (rs.next()) {
+
+				Blob imageBlob = rs.getBlob("photo");
+				InputStream rphoto = imageBlob.getBinaryStream(0, imageBlob.length());
 				Rector emp = new Rector(rs.getInt("rid"), rs.getString("name"), rs.getString("dob"),
 						rs.getString("collage"), rs.getString("address"), rs.getLong("phoneno"), rs.getString("email"),
-						rs.getString("password"), rs.getString("daj"), rs.getString("dol"), rs.getString("photo"));
+						rs.getString("password"), rs.getString("daj"), rs.getString("dol"), rphoto);
 
 				rectorList.add(emp);
 			}
@@ -50,7 +54,7 @@ public class RectorData {
 	}
 
 	public static int saveRector(int rid, String name, String dob, String address, long phoneNo, String email,
-			String password, String dateOfJoin, Part photo) {
+			String password, String dateOfJoin, InputStream photo) {
 		int status = 0;
 
 		String sqlqry = "insert into rector(rid,name,dob,collage,address,phoneno,email,password,dojoin,dol,photo) values(?,?,?,?,?,?,?,?,?,?,?)";
@@ -72,10 +76,14 @@ public class RectorData {
 			ps.setString(7, email);
 			ps.setString(8, password);
 			ps.setString(9, dateOfJoin);
-			ps.setString(10, "");
+			if (photo != null) {
+				ps.setBlob(10, photo);
+			}
+			
 
 			// FileInputStream fin=new FileInputStream(photo);
-			//ps.setBinaryStream(11, photo.getInputStream(), (int) photo.getSize());
+			// ps.setBinaryStream(11, photo.getInputStream(), (int)
+			// photo.getSize());
 			// ps.setBinaryStream(11,fin,fin.available());
 
 			status = ps.executeUpdate();
@@ -96,23 +104,17 @@ public class RectorData {
 			Statement smt = con.createStatement();
 			ResultSet rs = smt.executeQuery("select * from rector where rid=" + rid);
 
-			String rphoto;
+			InputStream rphoto = null;
 			while (rs.next()) {
 				if (rs.getBlob("photo") != null) {
-					Blob b = rs.getBlob("photo");
-					byte barr[] = b.getBytes(1, (int) b.length());
-
-					FileOutputStream fout = new FileOutputStream("WebContent\\image\\rector_photo\\r" + rid + ".jpg");
-					fout.write(barr);
-					rphoto = "WebContent\\image\\rector_photo\\r" + rid + ".jpg";
-					fout.close();
+					Blob imageBlob = rs.getBlob("photo");
+					rphoto = imageBlob.getBinaryStream(0, imageBlob.length());
 				} else
-					rphoto = "WebContent\\image\\rector_photo\\user_image.png";
 
-				rector = new Rector(rs.getInt("rid"), rs.getString("name"), rs.getString("dob"),
-						rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"),
-						rs.getString("email"), rs.getString("password"), rs.getString("doj"), rs.getString("dol"),
-						rphoto);
+					rector = new Rector(rs.getInt("rid"), rs.getString("name"), rs.getString("dob"),
+							rs.getString("college"), rs.getString("address"), rs.getLong("mobile_num"),
+							rs.getString("email"), rs.getString("password"), rs.getString("doj"), rs.getString("dol"),
+							rphoto);
 
 			}
 			return rector;

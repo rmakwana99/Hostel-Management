@@ -1,5 +1,7 @@
 package com.rahulvivek.hostel.db;
 
+import java.io.InputStream;
+
 public class Rector {
 
 	private int rid;
@@ -12,7 +14,7 @@ public class Rector {
 	private String password;
 	private String dateOfJoin;
 	private String dateOfLeave;
-	private String photo;
+	private InputStream photo;
 
 	public Rector() {
 		
@@ -23,7 +25,7 @@ public class Rector {
 	}
 
 	public Rector(int rid, String name, String dob, String collage, String address, long phoneno, String email,
-			String password, String dateOfJoin, String dateOfLeave,String photo) {
+			String password, String dateOfJoin, String dateOfLeave,InputStream photo) {
 		this.rid = rid;
 		this.name = name;
 		this.dob = dob;
@@ -117,11 +119,11 @@ public class Rector {
 		this.dateOfLeave = dateOfLeave;
 	}
 
-	public String getPhoto() {
+	public InputStream getPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(String photo) {
+	public void setPhoto(InputStream photo) {
 		this.photo = photo;
 	}
 }

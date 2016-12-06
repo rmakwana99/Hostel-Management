@@ -1,6 +1,8 @@
 package com.rahulvivek.hostel.controller;
 
 import java.io.IOException;
+import java.io.InputStream;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,14 +21,23 @@ public class AddRector extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		System.out.println("start");
+		InputStream rphoto=null;
 		String name=request.getParameter("rector_name");
 		String dob=(request.getParameter("rector_dob"));
 		String address=request.getParameter("rector_add");
 		long mobile=Long.parseLong(request.getParameter("rector_numb"));
 		String email=request.getParameter("rector_email");
 		String password=request.getParameter("rector_pass");
-		//String photo=request.getParameter("rector_photo");
-		Part rphoto =  request.getPart("rector_photo");
+		Part filePart =  request.getPart("rector_photo");
+		if (filePart != null) {
+			// prints out some information for debugging
+			System.out.println(filePart.getName());
+			System.out.println(filePart.getSize());
+			System.out.println(filePart.getContentType());
+			
+			// obtains input stream of the upload file
+			rphoto = filePart.getInputStream();
+		}
 		String dateOfJoin=request.getParameter("doj");
 		
 		System.out.println(name+" "+dob+" "+address+" "+mobile+" "+email+" "+password+" "+rphoto+" "+dateOfJoin);
