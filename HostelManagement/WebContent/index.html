@@ -1,173 +1,131 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="index_css.css"></link>
-<link rel="stylesheet" href="index_validation_css.css"></link>
-<script type="text/javascript" src="validation.js"></script>
-<meta charset="ISO-8859-1">
-<title>Hostel Management</title>
+    <link rel="stylesheet" href="index_css.css"></link>
+    <link rel="stylesheet" href="index_validation_css.css"></link>
+    <script type="text/javascript" src="validation.js"></script>
+    <meta charset="ISO-8859-1">
+    <title>Hostel Management</title>
 </head>
+
 <body>
-	<!-- Header Logo  -->
+    <!-- Header Logo  -->
 
-	<div id="title_rec">
-		<div id="logo_12">
-			<a style="text-decoration: none" href="index.html">
-			<img src="icons/logo_nest.png" id="logo_1" /></a>
-				<p id="logo_2">Nest.in</p>
-			</div>
-	</div>
+    <div id="title_rec">
+        <div id="logo_12">
+            <a style="text-decoration: none" href="index.html">
+                <img src="icons/logo_nest.png" id="logo_1" /></a>
+            <p id="logo_2">Nest.in</p>
+        </div>
+    </div>
 
-	<!--  Rector Login Details here -->
-<hr id="line"></hr>
-	<div id="rector">
-		<form id="form_rec" action="rector_login" method="get" onsubmit="return rectorLogin(this)">
-			<table>
-			<p id="link_login">Rector Login</p>
-			<hr id="line"></hr>
-				<tr>
-					<td><img src="icons/email.png" id="email_rec_icon" /><input id="rector_un"
-						type="text" name="rector_un" placeholder="Email ID" /></td>
+    <!--  Rector Login Details here -->
+    <hr id="line"></hr>
+    <div id="rector">
+        <form id="form_rec" action="rector_login" method="get" onsubmit="return rectorLogin(this)">
+            <table>
+                <p id="link_login">Login Rector</p>
+                <hr id="line"></hr>
+                <tr>
+                    <td><img src="icons/email.png" id="email_rec_icon" /><input id="rector_un" type="text" name="rector_un" placeholder="Email ID" /></td>
 
-				</tr>
-				<tr>
-					<td><img src="icons/password.png" id="password_rec_icon" /><input id="rector_pw"
-						type="password" name="rector_pw" placeholder="Password" /></td>
-				</tr>
-				<tr>
-					<td><input id="login_rec" type="submit" name="student_submit"
-						value="Login" /></td>
-				</tr>
-			</table>
-			<div id="link_fp">
-				<a id="link_fp" href="reset_password.html">Forgot Password?</a>
-			</div>
-			<hr id="line_down"></hr>
-			<div id="link">
-				<a  id="link" href="rector_registration.html">Rector Registration</a>
-			</div>
-		</form>
+                </tr>
+                <tr>
+                    <td><img src="icons/password.png" id="password_rec_icon" /><input id="rector_pw" type="password" name="rector_pw" placeholder="Password" /></td>
+                </tr>
+                <tr>
+                    <td><input id="login_rec" type="submit" name="student_submit" value="Login" /></td>
+                </tr>
+            </table>
+            <div id="link_fp">
+                <a id="link_fp" href="reset_password.html">Forgot Password?</a>
+            </div>
+            <hr id="line_down"></hr>
+            <div id="link">
+                <a id="link" href="rector_registration.html">Rector Registration</a>
+            </div>
+        </form>
 
-	</div>
+    </div>
 
-<!--  Student Login Details here -->
+    <!--  Student Login Details here -->
 
-	<div id="student">
-			
-		<form id="form_stu" action="student_login" method="get" onsubmit="return studentLogin(this)">
-			<table>
-			<p id="link_login">Student Login</p>
-			<hr id="line"></hr>
-				<tr>
-					<td><img src="icons/email.png" id="email_stu_icon" /><input id="student_un"
-						type="text" name="student_un" placeholder="Email ID" /></td>
-				</tr>
-				<tr>
-					<td><img src="icons/password.png" id="password_stu_icon" /><input id="student_pw"
-						type="password" name="student_pw" placeholder="Password" /></td>
-				</tr>
-				<tr>
-					<td><input id="login_stu" type="submit" name="student_submit"
-						value="Login" /></td>
-				</tr>
-			</table>
-			<div id="link_fp">
-				<a id="link_fp" href="reset_password.html">Forgot Password?</a>
-			</div>
-			<hr id="line_down"></hr>
-			<div id="link">
-				<a id="link" href="student_registration.html">Student
+    <div id="student">
+
+        <form id="form_stu" action="student_login" method="get" onsubmit="return studentLogin(this)">
+            <table>
+                <p id="link_login">Student Login</p>
+                <hr id="line"></hr>
+                <tr>
+                    <td><img src="icons/email.png" id="email_stu_icon" /><input id="student_un" type="text" name="student_un" placeholder="Email ID" /></td>
+                </tr>
+                <tr>
+                    <td><img src="icons/password.png" id="password_stu_icon" /><input id="student_pw" type="password" name="student_pw" placeholder="Password" /></td>
+                </tr>
+                <tr>
+                    <td><input id="login_stu" type="submit" name="student_submit" value="Login" /></td>
+                </tr>
+            </table>
+            <div id="link_fp">
+                <a id="link_fp" href="reset_password.html">Forgot Password?</a>
+            </div>
+            <hr id="line_down"></hr>
+            <div id="link">
+                <a id="link" href="student_registration.html">Student
 				Registration</a>
-		</div>
-		</form>
+            </div>
+        </form>
 
-		
-	</div> 
+    </div>
 
-	
-	<hr id="line_f"></hr>
-<!--  Hostel Images Here -->
+    <hr id="line_f"></hr>
+    <!--  Hostel Images Here -->
 
-	 <div id="hostel_image">
-		<p>Hostel Images</p>
-				<hr id="line"></hr>
-		<img alt="Hostel images" src="image/hostel_building.jpg" /> <img
-			alt="Hostel images" src="image/hostel_building1.jpg" /> <img
-			alt="Hostel images" src="image/hostel_room.jpg" /> <img
-			alt="Hostel images" src="image/hostel_room1.jpg" /> <img
-			alt="Hostel images" src="image/hostel_room2.jpg" /> <img
-			alt="Hostel images" src="image/hostel_room3.jpg" /> <img
-			alt="Hostel images" src="image/hostel_room4.jpg" /> <img
-			alt="Hostel images" src="image/hostel_mess.jpg" />
-	</div>
+    <div id="hostel_image">
+        <p>Hostel Images</p>
+        <hr id="line"></hr>
+        <img alt="Hostel images" src="image/hostel_building.jpg" /> <img alt="Hostel images" src="image/hostel_building1.jpg" /> <img alt="Hostel images" src="image/hostel_room.jpg" /> <img alt="Hostel images" src="image/hostel_room1.jpg" /> <img alt="Hostel images"
+            src="image/hostel_room2.jpg" /> <img alt="Hostel images" src="image/hostel_room3.jpg" /> <img alt="Hostel images" src="image/hostel_room4.jpg" /> <img alt="Hostel images" src="image/hostel_mess.jpg" />
+    </div>
 
-	<!--  Rules here -->
-<hr id="line_f"></hr>
-	<div id="rr_details">
-		<p id="rr_link_login">Rules and Regulations.</p>
-		<hr id="line"></hr>
-		<div id="rr_rules">
-			<p>1. Ragging is strictly prohibited in any form; if someone
-				found guilty, severe action will be taken.
-			<p>2. Students are not allowed to consume alcoholic, narcotic
-				drugs or any intoxicating substance in the hostel premises.</p>
-			<p>3. All visitors to the hostel including the parents/guardian
-				will have to make necessary entries in the visitor's book available
-				at the hostel entrance with the security guard.</p>
-			<p>4. Students should not keep any unauthorized property and
-				unauthorized guests in his/her room.</p>
-			<p>5. No person,either guest or otherwise shall be permitted to
-				stay overnight in any part of the hostel. If guest want to stay
-				overnight in the hostel, he/she should take permission from rector.
-			</p>
-			<p>6. Girls are not allowed to enter between 11 PM to 6 AM at
-				boy's hostel.</p>
-			<p>7. Boys are not allowed to enter at the girls hostel without
-				permission.</p>
-			<p>8. All girl students are expected to be back in the hostel by
-				12.00 in the night. If any student wishes to be away, should take
-				permission from the hostel authority with appropriate reasons.</p>
-			<p>9. Students are responsible for the safekeeping of their
-				valuables. Students should provide their own locks and should take
-				proper care of their belongings.</p>
-			<p>10. Students are not allowed to arrange any group religious
-				activities in their room.</p>
-			<p>11. Students should handle hostel equipments, furniture, mess
-				property carefully and not abuse or tamper with it. If so then
-				applicable fine will be charged by the hostel management.</p>
-			<p>12. Students have to use water and electricity judiciously. If
-				fan, tube, etc., found ON in the absence of the students at their
-				rooms, fine will be charged by hostel authorities.</p>
-			<p>13. TT-Gym-Shuttle room keys will be issued by the security
-				personnel by taking the student ID card at the check post.</p>
-			<p>14. Students should switch off the lights and fans when
-				TT-TV-Gym-Shuttle rooms are not in use.</p>
-			<p>15. Garbage and wastage only be put at garbage box available
-				nearby hostel premises.</p>
-			<p>16. Students during their stay in the hostel will be governed
-				by the hostel management rules.</p>
-			<p>17. No student shall use the service of a hostel housekeeping
-				person for personal work.</p>
-			<p>18. Students will not enter rooms of other students without
-				permission of the inmates.</p>
-			<p>19. Every case of illness and accident must be reported
-				immediately to the hostel authorities.</p>
-			<p>20. No function or celebration shall be organized at hostel
-				premises except with the permission of the Warden.</p>
-			<p>21. Students suffering from contagious disease will not be
-				allowed to stay at hostel. Decision of the Warden in this regard
-				will be final and binding.</p>
-		</div>
-	</div>
-<hr id="line_f"></hr>
+    <!--  Rules here -->
+    <hr id="line_f"></hr>
+    <div id="rr_details">
+        <p id="rr_link_login">Rules and Regulations.</p>
+        <hr id="line"></hr>
+        <div id="rr_rules">
+            <p>1. Ragging is strictly prohibited in any form; if someone found guilty, severe action will be taken.
+                <p>2. Students are not allowed to consume alcoholic, narcotic drugs or any intoxicating substance in the hostel premises.</p>
+                <p>3. All visitors to the hostel including the parents/guardian will have to make necessary entries in the visitor's book available at the hostel entrance with the security guard.</p>
+                <p>4. Students should not keep any unauthorized property and unauthorized guests in his/her room.</p>
+                <p>5. No person,either guest or otherwise shall be permitted to stay overnight in any part of the hostel. If guest want to stay overnight in the hostel, he/she should take permission from rector.</p>
+                <p>6. Girls are not allowed to enter between 11 PM to 6 AM at boy's hostel.</p>
+                <p>7. Boys are not allowed to enter at the girls hostel without permission.</p>
+                <p>8. All girl students are expected to be back in the hostel by 12.00 in the night. If any student wishes to be away, should take permission from the hostel authority with appropriate reasons.</p>
+                <p>9. Students are responsible for the safekeeping of their valuables. Students should provide their own locks and should take proper care of their belongings.</p>
+                <p>10. Students are not allowed to arrange any group religious activities in their room.</p>
+                <p>11. Students should handle hostel equipments, furniture, mess property carefully and not abuse or tamper with it. If so then applicable fine will be charged by the hostel management.</p>
+                <p>12. Students have to use water and electricity judiciously. If fan, tube, etc., found ON in the absence of the students at their rooms, fine will be charged by hostel authorities.</p>
+                <p>13. TT-Gym-Shuttle room keys will be issued by the security personnel by taking the student ID card at the check post.</p>
+                <p>14. Students should switch off the lights and fans when TT-TV-Gym-Shuttle rooms are not in use.</p>
+                <p>15. Garbage and wastage only be put at garbage box available nearby hostel premises.</p>
+                <p>16. Students during their stay in the hostel will be governed by the hostel management rules.</p>
+                <p>17. No student shall use the service of a hostel housekeeping person for personal work.</p>
+                <p>18. Students will not enter rooms of other students without permission of the inmates.</p>
+                <p>19. Every case of illness and accident must be reported immediately to the hostel authorities.</p>
+                <p>20. No function or celebration shall be organized at hostel premises except with the permission of the Warden.</p>
+                <p>21. Students suffering from contagious disease will not be allowed to stay at hostel. Decision of the Warden in this regard will be final and binding.</p>
+        </div>
+    </div>
+    <hr id="line_f"></hr>
 
-	<!--  footer here -->
+    <!--  footer here -->
 
-	<div id="footer">
-		<a id="footer_1" href="aboutus.html">About Us.</a> <a id="footer_2"
-			href="contactus.html">Contact Us</a> <a id="footer_3"
-			href="copyright.html">@copyright</a>
-	</div>
+    <div id="footer">
+        <a id="footer_1" href="aboutus.html">About Us.</a> <a id="footer_2" href="contactus.html">Contact Us</a> <a id="footer_3" href="copyright.html">@copyright</a>
+    </div>
 
 </body>
+
 </html>
